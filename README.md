@@ -62,5 +62,6 @@ apiVersion: foo.my.domain/v1alpha1
 kind: Bar
 metadata:
   name: bar-sample
+  namespace: foo
 EOF
 ```

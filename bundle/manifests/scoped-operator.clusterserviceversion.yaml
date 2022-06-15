@@ -37,6 +37,13 @@ spec:
       clusterPermissions:
       - rules:
         - apiGroups:
+          - apps
+          resources:
+          - deployments
+          verbs:
+          - watch
+          - list
+        - apiGroups:
           - foo.my.domain
           resources:
           - bars
@@ -154,7 +161,6 @@ spec:
           - create
           - delete
           - get
-          - list
           - patch
           - update
         - apiGroups:
