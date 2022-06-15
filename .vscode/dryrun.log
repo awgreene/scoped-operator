@@ -1,0 +1,9 @@
+make: Entering directory `/Users/agreene/dev/demo/scoped-operator'
+mkdir -p /Users/agreene/dev/demo/scoped-operator/bin
+GOBIN=/Users/agreene/dev/demo/scoped-operator/bin go install sigs.k8s.io/controller-tools/cmd/controller-gen@v0.8.0
+/Users/agreene/dev/demo/scoped-operator/bin/controller-gen object:headerFile="hack/boilerplate.go.txt" paths="./..."
+go fmt ./...
+go vet ./...
+go build -o bin/manager main.go
+make: Leaving directory `/Users/agreene/dev/demo/scoped-operator'
+ 

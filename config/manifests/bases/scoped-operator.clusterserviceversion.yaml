@@ -1,0 +1,46 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+    alm-examples: '[]'
+    capabilities: Basic Install
+  name: scoped-operator.v0.0.0
+  namespace: placeholder
+spec:
+  apiservicedefinitions: {}
+  customresourcedefinitions:
+    owned:
+    - description: Bar is the Schema for the bars API
+      displayName: Bar
+      kind: Bar
+      name: bars.foo.my.domain
+      version: v1alpha1
+  description: An example operator that can be scoped to a set of namespaces.
+  displayName: Scoped Operator
+  icon:
+  - base64data: ""
+    mediatype: ""
+  install:
+    spec:
+      deployments: null
+    strategy: ""
+  installModes:
+  - supported: false
+    type: OwnNamespace
+  - supported: false
+    type: SingleNamespace
+  - supported: false
+    type: MultiNamespace
+  - supported: true
+    type: AllNamespaces
+  keywords:
+  - foo
+  - bar
+  - demo
+  links:
+  - name: Scoped Operator
+    url: https://scoped-operator.domain
+  maturity: alpha
+  provider:
+    name: Red Hat, inc.
+  version: 0.0.0
