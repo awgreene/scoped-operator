@@ -2,9 +2,11 @@
 
 # Build the catalog 
 
+```
 make docker-build docker-push IMG="quay.io/agreene/scoped-operator:v0.0.1"
 make bundle-build bundle-push IMG="quay.io/agreene/scoped-operator:v0.0.1" BUNDLE_IMG=quay.io/agreene/scoped-operator-bundle:v0.0.1
 make catalog-build catalog-push IMG="quay.io/agreene/scoped-operator:v0.0.1" BUNDLE_IMG=quay.io/agreene/scoped-operator-bundle:v0.0.1 CATALOG_IMG=quay.io/agreene/scoped-operator-catalog:v0.0.1 
+```
 
 ## Create a namespace, operatorgroup, and subscription for the demo
 ```bash
